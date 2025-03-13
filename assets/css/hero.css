@@ -1,0 +1,222 @@
+/* 
+ * HERO SECTION STYLES
+ * Styles spécifiques pour la section hero de Multitek
+ * Créé pour améliorer la maintenabilité du code
+ */
+
+/* Configuration principale de la section hero */
+#hero {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+  background-color: var(--dark-color);
+}
+
+/* Background moderne avec dégradé et motif */
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(32, 32, 32, 0.95) 0%,
+    rgba(54, 54, 54, 0.85) 50%,
+    rgba(32, 32, 32, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+/* Motif en grille pour ajouter de la texture */
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(231, 74, 59, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(231, 74, 59, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 1;
+}
+
+/* Élément décoratif 1 - Cercle gradient rouge */
+.hero-decorative-element-1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(231, 74, 59, 0.8) 0%,
+    rgba(231, 74, 59, 0) 70%
+  );
+  top: -100px;
+  right: -50px;
+  z-index: 1;
+  animation: pulse 8s infinite alternate ease-in-out;
+}
+
+/* Élément décoratif 2 - Losange */
+.hero-decorative-element-2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  background: rgba(255, 255, 255, 0.05);
+  bottom: -100px;
+  left: 10%;
+  z-index: 1;
+  animation: float 10s infinite alternate ease-in-out;
+}
+
+/* Conteneur pour le contenu avec z-index supérieur */
+#hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animations pour les éléments décoratifs */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(45deg) translateY(0);
+  }
+  100% {
+    transform: rotate(45deg) translateY(-20px);
+  }
+}
+
+/* Style spécial pour le titre Multitek dans la section hero */
+.hero-content {
+  text-align: center;
+}
+
+.multitek-hero {
+  color: var(--accent-color);
+  font-weight: 800;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  position: relative;
+}
+
+.multitek-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.multitek-hero span {
+  color: var(--primary-color);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+
+.hero-description {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Boutons d'appel à l'action */
+.cta-buttons {
+  position: relative;
+  z-index: 3;
+}
+
+#hero .btn {
+  padding: 14px 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#hero .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#hero .btn-primary {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+#hero .btn-secondary {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+#hero .btn-secondary:hover {
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+  .multitek-hero {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.4rem;
+  }
+
+  #hero {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .multitek-hero {
+    font-size: 2.8rem;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+  }
+
+  #hero .btn {
+    padding: 12px 28px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
