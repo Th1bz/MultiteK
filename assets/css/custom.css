@@ -125,18 +125,20 @@ h6 {
   color: var(--accent-color);
 }
 
+/* Titres du footer avec trait en dessous */
 .footer-services h3 {
   color: var(--accent-color);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  display: inline-block;
 }
 
 .footer-services h3::after {
   content: "";
   position: absolute;
-  width: 30px;
-  height: 2px;
+  width: 40px; /* Largeur plus cohérente avec le design */
+  height: 3px; /* Légèrement plus épais pour l'aspect industriel */
   background-color: var(--primary-color);
   bottom: 0;
   left: 0;
@@ -162,7 +164,6 @@ h6 {
   background-color: var(--primary-color);
   height: 3px;
   border-radius: 0;
-  margin-bottom: 10px;
 }
 
 /* Style mécanique pour les titres de section */
