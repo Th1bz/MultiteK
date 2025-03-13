@@ -171,6 +171,7 @@
 
 #hero .btn-primary {
   background-color: var(--primary-color);
+  color: var(--accent-color);
   border: 2px solid var(--primary-color);
 }
 

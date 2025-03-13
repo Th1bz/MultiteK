@@ -198,40 +198,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const randomX = Math.random() * 50 - 25; // Entre -25px et 25px
     const randomY = Math.random() * 50 - 25; // Entre -25px et 25px
     decorElement1.style.transform = `translate(${randomX}px, ${randomY}px)`;
-
-    // Effet de parallaxe au défilement
-    window.addEventListener("scroll", function () {
-      const scrollPos = window.scrollY;
-      const heroHeight = heroSection.offsetHeight;
-
-      // Ne pas appliquer l'effet si on est trop loin de la section hero
-      if (scrollPos > heroHeight * 1.5) return;
-
-      // Effet de parallaxe inversé pour le premier élément (mouvement plus lent)
-      const offset1 = scrollPos * 0.2;
-      decorElement1.style.transform = `translate(${randomX}px, ${
-        randomY - offset1
-      }px)`;
-
-      // Effet de parallaxe pour le second élément (mouvement plus rapide)
-      const offset2 = scrollPos * 0.4;
-      decorElement2.style.transform = `rotate(45deg) translateY(${offset2}px)`;
-    });
-
-    // Effet de suivi de souris pour ajouter de l'interactivité
-    heroSection.addEventListener("mousemove", function (e) {
-      // Calculer la position relative de la souris par rapport au centre
-      const mouseX = e.clientX / window.innerWidth - 0.5;
-      const mouseY = e.clientY / window.innerHeight - 0.5;
-
-      // Appliquer un léger mouvement basé sur la position de la souris
-      decorElement1.style.transform = `translate(${randomX + mouseX * 20}px, ${
-        randomY + mouseY * 20
-      }px)`;
-      decorElement2.style.transform = `rotate(45deg) translate(${
-        mouseX * 15
-      }px, ${mouseY * 15}px)`;
-    });
   };
 
   /**

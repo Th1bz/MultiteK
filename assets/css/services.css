@@ -130,6 +130,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   transition: all 0.3s ease;
+  text-align: center;
   position: relative;
   padding-bottom: 10px;
 }
@@ -159,6 +160,7 @@
   overflow: hidden;
   transition: max-height 0.5s ease, opacity 0.5s ease, margin 0.3s ease;
   margin-top: 0;
+  text-align: center;
 }
 
 .service-card:hover .service-content p {

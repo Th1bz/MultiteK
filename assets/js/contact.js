@@ -14,6 +14,7 @@ const CONFIG = {
   formSelector: "#contactForm",
   nameSelector: "#name",
   emailSelector: "#email",
+  phoneSelector: "#phone",
   subjectSelector: "#subject",
   messageSelector: "#message",
   submitButtonSelector: 'button[type="submit"]',

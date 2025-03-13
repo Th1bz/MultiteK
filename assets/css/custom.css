@@ -1,17 +1,66 @@
+/* 
+ * MULTITEK - STYLES PERSONNALISÉS
+ * Ce fichier définit les styles spécifiques à la charte graphique Multitek
+ * qui sont partagés entre plusieurs composants
+ */
+
+/* Style spécifique pour les headings avec un aspect plus technique/industriel */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+/* Style du logo Multitek avec aspect mécanique/industriel */
 .multitek {
   color: var(--dark-color);
   font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
 }
 
 .multitek span {
   color: var(--primary-color);
+  position: relative;
+  display: inline-block;
 }
 
-/* Style spécial pour le titre Multitek dans la section hero */
-/* Les styles pour .multitek-hero, .hero-title, .hero-description ont été déplacés dans hero.css */
+/* Effet "mécanique" au survol du logo */
+.logo:hover .multitek span {
+  animation: mechanicalPulse 0.5s ease-in-out;
+}
 
-/* Styles spécifiques à la charte graphique Multitek */
-/* Boutons */
+@keyframes mechanicalPulse {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Boutons avec aspect plus technique */
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .btn-primary {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
@@ -33,29 +82,11 @@
   color: var(--dark-color);
 }
 
-/* Navigation */
-.nav-menu a.active,
-.nav-menu a:hover {
-  color: var(--primary-color);
-}
-
 /* Header scrollé */
 .header-scrolled {
   background-color: var(--dark-color);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
-
-/* Hamburger menu */
-.bar {
-  background-color: var(--dark-color);
-}
-
-.hamburger.active .bar:nth-child(1),
-.hamburger.active .bar:nth-child(3) {
-  background-color: var(--primary-color);
-}
-
-/* Hero Section - Styles déplacés dans hero.css */
 
 /* Sections alternées */
 #services,
@@ -67,15 +98,6 @@
 #hero,
 #footer {
   background-color: var(--dark-color);
-}
-
-/* Cartes de services */
-.service-card {
-  border-bottom: 3px solid var(--primary-color);
-}
-
-.service-card i {
-  color: var(--primary-color);
 }
 
 /* Icônes */
@@ -134,10 +156,19 @@
   text-decoration: underline;
 }
 
-/* Bordures et accents */
+/* Bordures et accents avec aspect technique/industriel */
 .section-header h2::after,
 .footer-links h3::after {
   background-color: var(--primary-color);
+  height: 3px;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+/* Style mécanique pour les titres de section */
+.section-header h2 {
+  position: relative;
+  padding-bottom: 15px;
 }
 
 /* Formulaire */
