@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="assets/css/hero.css" />
     <!-- CSS spécifique à la navigation -->
     <link rel="stylesheet" href="assets/css/navigation.css" />
+    <!-- CSS spécifique aux services -->
+    <link rel="stylesheet" href="assets/css/services.css" />
     <!-- Font Awesome (pour les icônes) -->
     <link
       rel="stylesheet"
@@ -73,37 +75,82 @@
         </div>
         <div class="services-grid">
           <div class="service-card">
-            <i class="fas fa-shopping-cart"></i>
-            <h3>Vente de Matériel</h3>
-            <p>
-              Équipements professionnels de manutention, auto-laveuses,
-              nettoyants haute pression et matériel spécialisé pour les
-              professionnels.
-            </p>
+            <div class="service-image">
+              <img
+                src="assets/images/atelier1.jpeg"
+                alt="Vente de matériel professionnel"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="service-content">
+              <h3>Vente de Matériel</h3>
+              <p>
+                Équipements professionnels de manutention, auto-laveuses,
+                nettoyants haute pression et matériel spécialisé pour les
+                professionnels.
+              </p>
+            </div>
           </div>
           <div class="service-card">
-            <i class="fas fa-tools"></i>
-            <h3>Réparation</h3>
-            <p>
-              Service de réparation rapide et efficace pour tous vos équipements
-              de manutention et de nettoyage, toutes marques confondues.
-            </p>
+            <div class="service-image">
+              <img
+                src="assets/images/atelier2.jpeg"
+                alt="Service de réparation"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <div class="service-content">
+              <h3>Réparation</h3>
+              <p>
+                Service de réparation rapide et efficace pour tous vos
+                équipements de manutention et de nettoyage, toutes marques
+                confondues.
+              </p>
+            </div>
           </div>
           <div class="service-card">
-            <i class="fas fa-cogs"></i>
-            <h3>Pièces Détachées</h3>
-            <p>
-              Large gamme de pièces détachées multi-marques pour l'entretien et
-              la réparation de vos équipements professionnels.
-            </p>
+            <div class="service-image">
+              <img
+                src="assets/images/atelier3.jpeg"
+                alt="Pièces détachées"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="service-content">
+              <h3>Pièces Détachées</h3>
+              <p>
+                Large gamme de pièces détachées multi-marques pour l'entretien
+                et la réparation de vos équipements professionnels.
+              </p>
+            </div>
           </div>
           <div class="service-card">
-            <i class="fas fa-handshake"></i>
-            <h3>Location</h3>
-            <p>
-              Solutions de location flexibles pour matériel de manutention,
-              auto-laveuses et équipements de nettoyage professionnels.
-            </p>
+            <div class="service-image">
+              <img
+                src="assets/images/atelier4.jpeg"
+                alt="Solutions de location"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="service-content">
+              <h3>Location</h3>
+              <p>
+                Solutions de location flexibles pour matériel de manutention,
+                auto-laveuses et équipements de nettoyage professionnels.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -120,7 +167,11 @@
         </div>
         <div class="about-content">
           <div class="about-image">
-            <img src="assets/images/Multitek.jpeg" alt="À propos de Multitek" />
+            <img
+              src="assets/images/Multitek.jpeg"
+              alt="À propos de Multitek"
+              loading="lazy"
+            />
           </div>
           <div class="about-text">
             <h3>Notre Expertise</h3>
@@ -233,7 +284,7 @@
               </div>
               <div class="form-group">
                 <select id="service" name="service">
-                  <option value="" disabled selected>Service concerné</option>
+                  <option value="" disabled selected>Sujet</option>
                   <option value="vente">Vente de matériel</option>
                   <option value="reparation">Réparation</option>
                   <option value="pieces">Pièces détachées</option>

@@ -1,0 +1,214 @@
+/* 
+ * SERVICES SECTION STYLES
+ * Styles spécifiques pour la section services de Multitek
+ */
+
+/* Configuration principale de la section services */
+#services {
+  padding: 80px 0;
+  background-color: var(--accent-color);
+}
+
+/* Grille de services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Carte de service avec image intégrée */
+.service-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3);
+}
+
+/* Image du service - en arrière-plan */
+.service-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.service-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-image::after {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.65) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+/* Contenu du service - superposé à l'image */
+.service-content {
+  position: relative;
+  z-index: 3;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  color: var(--accent-color);
+}
+
+/* Icône placée en haut de la carte */
+.service-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-icon i {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+}
+
+/* Titre et description */
+.service-content h3 {
+  margin-bottom: 12px;
+  color: var(--accent-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.service-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.service-card:hover .service-content h3::after {
+  width: 70px;
+}
+
+.service-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin 0.3s ease;
+  margin-top: 0;
+}
+
+.service-card:hover .service-content p {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 15px;
+}
+
+/* Effet de bordure au survol */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background-color: var(--primary-color);
+  transition: height 0.3s ease;
+  z-index: 4;
+}
+
+.service-card:hover::before {
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .service-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    min-height: 300px;
+  }
+
+  .service-content p {
+    max-height: unset;
+    opacity: 1;
+    margin-top: 15px;
+  }
+}

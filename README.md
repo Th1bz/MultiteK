@@ -21,7 +21,8 @@ Multitek/
 │   │   ├── style.css   # Style principal
 │   │   ├── custom.css  # Personnalisations et charte graphique
 │   │   ├── hero.css    # Styles spécifiques à la section hero
-│   │   └── navigation.css # Styles spécifiques à la navigation
+│   │   ├── navigation.css # Styles spécifiques à la navigation
+│   │   └── services.css # Styles spécifiques aux services
 │   ├── js/             # Scripts JavaScript
 │   │   ├── main.js     # Script principal
 │   │   └── contact.js  # Gestion du formulaire de contact
