@@ -7,8 +7,8 @@
 const CONFIG = {
   // Clés EmailJS
   publicKey: "WtSDctCMaTZG5prkz",
-  serviceID: "service_devv5tf",
-  templateID: "template_c1yqywd",
+  serviceID: "service_gw7x2r4",
+  templateID: "template_xd1miae",
 
   // Sélecteurs
   formSelector: "#contactForm",
@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const templateParams = {
         from_name: document.querySelector(CONFIG.nameSelector).value,
         from_email: document.querySelector(CONFIG.emailSelector).value,
+        from_phone: document.querySelector(CONFIG.phoneSelector).value,
         subject: document.querySelector(CONFIG.subjectSelector).value,
         message: document.querySelector(CONFIG.messageSelector).value,
       };
